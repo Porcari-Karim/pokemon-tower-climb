@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #222;
+    background-image: url('./assets/images/lavender-town.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+#root {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.square {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 50%;
+    min-width: 400px;
+    max-width: 500px;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background-color: #111;
+}
+
+.square .filter {
+    /* backdrop-filter: blur(5px); */
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mask-image: url('https://upload.wikimedia.org/wikipedia/commons/0/01/SVG_Circle.svg');
+    background-image: repeating-conic-gradient(from 45deg, #111 0deg 90deg, #222 90deg 180deg);
+    background-size: 10% 10%;
+    mask-repeat: no-repeat;
+}
+
+
+.ball {
+    position: absolute;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    /* background-color: rgba(255, 255, 255, 0.30); */
+    /* width: 5%; */
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+
+.ennemy {
+    z-index: 5;
+    /* background-color: rgba(171, 16, 16, 0.619); */
+    background-image: url('./assets/images/gastly.png');
+    background-position: center;
+    background-size: cover;
+    animation: ennemy-glow 1s linear infinite alternate;
+    opacity: 0;
+}
+
+.player {
+    z-index: 5;
+    /* box-shadow: 0px 0px 9px 4px #747DE8; */
+    background-image: url('./assets/images/voltorb.png');
+    background-position: center;
+    background-size: cover;
+    animation: player-glow 1s linear infinite alternate;
+}
+
+.stairs {
+    width: 10%;
+    position: relative;
+    aspect-ratio: 1 / 1;
+    pointer-events: none;
+    background-image: url('./assets/images/stairs.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.message {
+    font-size: 3rem;
+    max-width: 400px;
+    text-align: center;
+    color: white;
+}
+
+.menu{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+}
+
+.menu button {
+    background-color: #333;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 50%;
+    height: 20%;
+    font: inherit;
+    color: white;
+    font-size: 3rem;
+}
+
+.menu .message {
+    font-size: 20px;
+}
+
+
+.align {
+    display: flex;
+    width: 80%;
+    max-width: 400px;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+    height: 50%;
+}
+
+@keyframes maximize-filter {
+    from {
+        mask-size: 20%;
+    }
+
+    to {
+        mask-size: 400%;
+        mask-position: center;
+    }
+}
+
+@keyframes minimize-filter {
+    from {
+        mask-position: center;
+        mask-size: 400%;
+    }
+    50% {
+        mask-size: 400%;
+        mask-position: center;
+    }
+
+    to {
+        mask-size: 20%;
+        mask-position: center;
+    }
+}
+
+/* Glowing effect found on : https://stackoverflow.com/questions/35754734/a-glow-around-a-circular-image-with-css-on-hover */
+
+@keyframes player-glow{
+    to {
+      box-shadow: 0px 0px 10px 5px #f6f203c0;
+    }
+  }
+
+  @keyframes ennemy-glow{
+    to {
+      box-shadow: 0px 0px 15px 10px rgb(125, 97, 168);
+      opacity: 0.6;
+    }
+  }
