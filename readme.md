@@ -27,17 +27,17 @@ Moreover the tower is filled with Gastlys who aren't very welcoming...
 ### Let's get throught all the game controls and how the game works
 <img src="./assets/readme/start_menu.png" width="400px" />
 
-You can move Voltorb using **WASD** or using the **Arrow Keys**
+You can move Voltorb using ***WASD*** or using the ***Arrow Keys***
 
 <img src="./assets/readme/mouvements.png" width="400px" />
 
 <img src="./assets/readme/wasd.png" width="400px" />
 
-You can move the spotlight using you **Mouse** and use it to find **Stairs**
+You can move the spotlight using you ***Mouse*** and use it to find ***Stairs***
 
 <img src="./assets/readme/reveal_stairs.png" width="400px" />
 
-Pay attention ! If Voltorb gets hit by a Gastly he will go all the way back to the pokécenter...
+Pay attention ! If Voltorb gets hit by a ***Gastly*** he will go all the way back to the pokécenter...
 
 <img src="./assets/readme/end_menu.png" width="400px" />
 
