@@ -14,3 +14,4 @@ startButtonElement.addEventListener('click', () =>{
     startMenuElement.remove();
     myGame.play();
 })
+

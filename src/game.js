@@ -27,7 +27,15 @@ class Game {
         this.gameLoop = setInterval(() => {
             this.update();
         }, 1000/60)
-
+        window.addEventListener('resize', () => {
+            console.log('resized');
+            // console.log('')
+            if(!this.playing) {
+                this.player.updateCoordinates();
+                this.stairs.updateCoordinates();
+                this.ennemies.forEach(ennemy => ennemy.updateCoordinates());
+            }
+        })
     }
 
     update = () => {
