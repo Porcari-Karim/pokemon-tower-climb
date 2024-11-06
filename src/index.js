@@ -5,7 +5,7 @@ const menuButtonElement = document.querySelector('#open-button');
 const soundMenuElement = document.querySelector('.sound-menu');
 const volumeInputElement = document.querySelector('#volume');
 
-const musicAudioElement = new Audio('./assets/audio/Lavender Town_Pokemon_ LetsGo_theme.mp3');
+const musicAudioElement = new Audio('assets/audio/Lavender Town_Pokemon_ LetsGo_theme.mp3');
 musicAudioElement.volume = 0.01;
 
 volumeInputElement.value = '0.1';
