@@ -54,9 +54,21 @@ class Game {
             })
         }
 
-        if(isKeyPressed('KeyP') && !this.lost) this.playing = !this.playing;
+        if(this.playing && !this.lost && isKeyPressed('KeyP')) this.pause();
+        if(!this.playing && !this.lost && isKeyPressed('Enter')) this.resume();
 
     }
+
+    pause = () => {
+        this.playing = !this.playing;
+        this.stairs.hide();
+    }
+
+    resume = () => {
+        this.playing = !this.playing;
+        this.stairs.show();
+    }
+
 
     endGame = () => {
         this.playing = false;

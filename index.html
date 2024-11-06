@@ -15,7 +15,19 @@
     <div id="root">
         <!-- <div class="message">You Lost On Floor X</div> -->
         <h1 class="title"> Lavender's City Pokémon Tower Climb</h1>
-        <div class="footer-message">For Instructions on how to play check <a href="https://github.com/Porcari-Karim/pokemon-tower-climb"><span>here</span></a></div>
+        <div class="footer-message">For Instructions on how to play check <a href="https://github.com/Porcari-Karim/pokemon-tower-climb"><span>here</span></a>
+            <br>
+            Press P for pause and Enter to resume.
+        </div>
+        <div class="open-sound-container">
+            <button id="open-button">|||</button>
+        </div>
+        <div class="sound-menu">
+            <div>
+                <label for="volume" style="text-align: center; width: 100%;">Sound Volume</label>
+                <input id="volume" name="volume" type="range" min="0" max="1" step="0.05" value="0.5">
+            </div>
+        </div>
         <div class="square">
             <!-- <div class="ball ennemy"></div> -->
             <div class="filter">
@@ -25,7 +37,7 @@
         </div>
         <div id="start-menu" class="menu">
             <div class="align">
-                <div class="message" style="font-size: 2rem;">Help Voltorb Make his way in the Pokémon Tower</div>
+                <div class="message" style="font-size: 2rem;">Help Voltorb make his way in the Pokémon Tower</div>
                 <button id="start-button">Start !</button>
             </div>
         </div>
